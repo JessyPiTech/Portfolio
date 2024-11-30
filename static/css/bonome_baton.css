@@ -1,0 +1,84 @@
+.stick-figure {
+  position: fixed;
+  z-index: 749;
+  width: 60px;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.head {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.body {
+  width: 4px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.arm-left, .arm-right {
+  width: 4px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 22px;
+  transform-origin: top;
+}
+.arm-left {
+  left: 45%;
+  
+}
+.arm-right {
+  right: 45%;
+  
+}
+.arm-left.raise-fist {
+  animation: raiseFist 1s ease forwards;
+}
+.arm-right.raise-fist {
+    animation: raiseFist 1s ease forwards;
+}
+.leg-left, .leg-right {
+  width: 4px;
+  height: 35px;
+  background-color: black;
+  position: absolute;
+  top: 50px;
+  transform-origin: top;
+}
+.leg-left {
+  left: 45%;
+}
+.leg-right {
+  right: 45%;
+}
+@keyframes swingArmLeft {
+  0%, 100% { transform: rotate(-30deg); }
+  50% { transform: rotate(10deg); }
+}
+@keyframes swingArmRight {
+  0%, 100% { transform: rotate(30deg); }
+  50% { transform: rotate(-10deg); }
+}
+@keyframes swingLegLeft {
+  0%, 100% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+}
+@keyframes swingLegRight {
+  0%, 100% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+}
+@keyframes raiseFist {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-90deg) translateY(-20px); }
+}
+
